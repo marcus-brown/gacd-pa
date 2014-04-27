@@ -37,7 +37,7 @@ regex_mean_std = "mean\\(\\)|std\\(\\)"
 # create vector of desired column names
 mean_std = as.character(features[grepl(regex_mean_std, features$V2),2])
 
-# final data is subset of combines data with meand and standard deviations only
+# final data is subset of combines data with mean and standard deviations only
 final_data = subset(combined_data, select=c("subject", "activity", mean_std))
 
 # get means per subject and activity
